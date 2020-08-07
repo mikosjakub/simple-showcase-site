@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <title>Showcase Page!</title>
+  </head>
+  <body>
+    <div class="grid-body-container">
+    <nav class="navbar">
+      <div>
+        <p class="logo">My Showcase Site!</p>
+      </div>
+      <div class="nav-buttons">
+        <!-- <a href="#" class="btn btn-nav" ">About Me</a> -->
+      </div>
+    </nav>
+    <div class="container">
+    <section class="grid-top">
+      <div class="slider-box box">
+        <h1>Image showcase</h1>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide current"></div>
+              <div class="slide"></div>
+              <div class="slide"></div>
+              <div class="slide"></div>
+              <div class="slide"></div>
+            </div>
+
+            <div class="slider-buttons">
+              <button id="prev" class="btn btn-slider"><i class="fas fa-arrow-left"></i></button>
+              <button id="next" class="btn btn-slider"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="box box-a">
+          <h1>Current time:</h1>
+          <time id="time"></time>
+        </div>
+        <div class="box box-b">
+          <h1>Todo list</h1>
+          <form class="todo-input-container" id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add task...">
+            <button class="btn add-icon" type="submit" id="todo-add-btn">+</button>
+          </form>
+          <ul class="todo-list" id="todo-list">
+            <li class="todo-list-item">Take out trash <button class="btn btn-delete" onclick="todoRemove">X</button> </li>
+          </ul>
+        </div>
+      </section>
+      <section class="grid-bottom">
+        <div class="box">
+          <h1>Exchange Rate</h1>
+          <div class="exchange-container">
+            <select id="currency-one">
+              <option value="PLN">PLN</option>
+              <option value="USD">USD</option>
+              <option value="EUR" selected>EUR</option>
+            </select>
+            <input type="number" id="amount-one" placeholder="0" value="1" />
+          </div>
+          <div class="exchange-container">
+            <!-- <button class="btn" id="swap">
+              Swap
+            </button> -->
+            <p class="rate" id="rate"></p>
+          </div>
+          <div class="exchange-container">
+            <select id="currency-two">
+              <option value="PLN" selected>PLN</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR </option>
+            </select>
+            <input type="number" id="amount-two" placeholder="0" value="1" />
+          </div>
+        </div>
+
+        <div class="box">
+          <h1>Drag and drop</h1>
+<ul id="draggable-list">
+  </ul>
+          </div>
+          
+          <div class="box">
+            <h1>New Year Counter</h1>
+            <p>New Year <span id="new-year"></span> in:</p>
+            <time id="new-year-countdown">
+              <span id="days"></span>d:
+              <span id="hours"></span>h:
+              <span id="minutes"></span>m:
+              <span id="seconds"></span>s
+            </time>
+          </div>
+        </div>
+      </section>
+  
+    <footer>
+      <p>&copy; 2020 Jakub Mikos</p>
+    </footer>
+  </div>
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="currency.js"></script>
+    <script src="time.js"></script>
+    <script src="draggable.js"></script>
+    <script src="todo.js"></script>
+    <script src="newyear.js"></script>
+  </body>
+</html>
